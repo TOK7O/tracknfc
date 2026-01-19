@@ -9,7 +9,7 @@
 	"compatibility_date": "2025-11-15",
 	"routes": [
 		{
-			"pattern": "${DOMAIN}",
+			"pattern": "DOMAIN",
 			"custom_domain": false
 		}
 	],
@@ -23,7 +23,7 @@
 	"kv_namespaces": [
 		{
 			"binding": "LinkMap",
-			"id": "${KV_LINKMAP_ID}",
+			"id": "62933281a1274a3bbf639d783f89a75e",
 			"remote": true
 		}
 	],
@@ -31,7 +31,7 @@
 		{
 			"binding": "DB",
 			"database_name": "tracknfc-db",
-			"database_id": "${D1_DATABASE_ID}",
+			"database_id": "0aeaec76-18fa-486a-b5d3-f7c909b22c7f",
 			"remote": true
 		}
 	]
