@@ -3,36 +3,36 @@
  * https://developers.cloudflare.com/workers/wrangler/configuration/
  */
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "tracknfc",
-  "main": "worker/index.ts",
-  "compatibility_date": "2025-11-15",
-  "routes": [
-    {
-      "pattern": "YOUR_DOMAIN",
-      "custom_domain": true
-    }
-  ],
-  "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS"
-  },
-  "observability": {
-    "enabled": true
-  },
-  "kv_namespaces": [
-    {
-      "binding": "LinkMap",
-      "id": "YOUR_KV_ID",
-      "remote": true
-    }
-  ],
-  "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "YOUR_DATABASE_NAME",
-      "database_id": "YOUR_DATABASE_ID",
-      "remote": true
-    }
-  ]
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "tracknfc",
+	"main": "worker/index.ts",
+	"compatibility_date": "2025-11-15",
+	"routes": [
+		{
+			"pattern": "${DOMAIN}",
+			"custom_domain": false
+		}
+	],
+	"assets": {
+		"directory": "./dist",
+		"binding": "ASSETS"
+	},
+	"observability": {
+		"enabled": true
+	},
+	"kv_namespaces": [
+		{
+			"binding": "LinkMap",
+			"id": "${KV_LINKMAP_ID}",
+			"remote": true
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "tracknfc-db",
+			"database_id": "${D1_DATABASE_ID}",
+			"remote": true
+		}
+	]
 }
