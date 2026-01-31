@@ -22,7 +22,7 @@ function AppContent() {
 
     const handleOptimisticAdd = (newSlug: string) => {
         setLinks(prev => [...prev, newSlug].sort((a, b) => a.localeCompare(b)));
-        setSelectedSlug(newSlug); // Od razu przełącz na nowy link
+        setSelectedSlug(newSlug);
     };
 
     const handleOptimisticDelete = (slugToDelete: string) => {
